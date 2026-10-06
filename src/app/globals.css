@@ -1,0 +1,363 @@
+@import "tailwindcss";
+
+@theme {
+  /* Arena palette — dark stage, saturated accents so champions pop. */
+  --color-pit-950: #07060d;
+  --color-pit-900: #0d0b18;
+  --color-pit-850: #131024;
+  --color-pit-800: #1a1630;
+  --color-pit-700: #251f42;
+  --color-pit-600: #342c59;
+
+  --color-ember-300: #ffc46b;
+  --color-ember-400: #ff9f3d;
+  --color-ember-500: #ff7a1a;
+  --color-ember-600: #e35c05;
+
+  --color-volt-300: #8ef7d5;
+  --color-volt-400: #3ee8b0;
+  --color-volt-500: #10c98d;
+
+  --color-blood-400: #ff5f6d;
+  --color-blood-500: #e8384f;
+
+  --color-arc-300: #a99cff;
+  --color-arc-400: #7b6cf6;
+  --color-arc-500: #5b48e0;
+
+  --font-display: "Bebas Neue", "Arial Narrow", system-ui, sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+html, body {
+  background: var(--color-pit-950);
+  color: #ece9ff;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The stage: a lit floor fading into a dark backdrop. */
+.stage-bg {
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 78%, rgba(255, 154, 61, 0.18), transparent 70%),
+    radial-gradient(ellipse 90% 60% at 50% 105%, rgba(123, 108, 246, 0.22), transparent 70%),
+    linear-gradient(180deg, #07060d 0%, #0d0b18 45%, #161231 100%);
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ *
+ * Champion rig
+ *
+ * The SVG groups parts around explicit pivots (shoulder, grip, hips). All
+ * motion is driven from here off `data-pose` on `.rr-figure`, so posing costs
+ * nothing per frame in React and two champions can animate independently.
+ *
+ * `--rr-beat` is a per-champion negative animation-delay, seeded from the
+ * feature key, so a row of champions never breathes in lockstep.
+ *
+ * One cross-file invariant: the strike's contact moment is the 46% keyframe of
+ * `rr-strike-*`. Arena.tsx derives its whole phase clock from that fraction, and
+ * `rr-hit-*` starts from those exact transform values. Move it in one place and
+ * the impact stops landing on the frame the blow does.
+ * ------------------------------------------------------------------ */
+
+/* Pivots are authored in viewBox units, so transform-origin must be measured
+   in the same space. fill-box would measure from each part's own bounding box
+   and put every joint in the wrong place. */
+.rr-figure,
+.rr-figure * {
+  transform-box: view-box;
+}
+
+@keyframes rr-breathe {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50%      { transform: translateY(-1.5px) scaleY(1.022); }
+}
+@keyframes rr-head-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-2.5px) rotate(-1.2deg); }
+}
+@keyframes rr-weapon-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50%      { transform: rotate(2.5deg); }
+}
+@keyframes rr-arm-sway {
+  0%, 100% { transform: rotate(1.5deg); }
+  50%      { transform: rotate(-1.5deg); }
+}
+@keyframes rr-cape-drift {
+  0%, 100% { transform: skewX(0deg) scaleY(1); }
+  50%      { transform: skewX(2.5deg) scaleY(1.015); }
+}
+
+/* Idle — always running, deliberately small. A champion that never moves reads
+   as a sprite; one that moves too much reads as a toy. */
+.rr-figure[data-pose="idle"] .rr-torso,
+.rr-figure[data-pose="strike"] .rr-torso {
+  animation: rr-breathe 3.4s ease-in-out infinite;
+  animation-delay: var(--rr-beat, 0s);
+}
+.rr-figure[data-pose="idle"] .rr-head {
+  animation: rr-head-bob 3.4s ease-in-out infinite;
+  animation-delay: var(--rr-beat, 0s);
+}
+.rr-figure[data-pose="idle"] .rr-weapon {
+  animation: rr-weapon-sway 4.6s ease-in-out infinite;
+  animation-delay: var(--rr-beat, 0s);
+}
+.rr-figure[data-pose="idle"] .rr-arm-back {
+  animation: rr-arm-sway 4.1s ease-in-out infinite;
+  animation-delay: var(--rr-beat, 0s);
+}
+.rr-figure[data-pose="idle"] .rr-cape,
+.rr-figure[data-pose="victory"] .rr-cape {
+  animation: rr-cape-drift 5.2s ease-in-out infinite;
+  animation-delay: var(--rr-beat, 0s);
+}
+
+/* Strike — wind up, then drive forward. The figure is mirrored per side in the
+   arena, so +x is always "toward the opponent" in local coordinates. */
+@keyframes rr-strike-body {
+  0%   { transform: translateX(0) rotate(0deg); }
+  22%  { transform: translateX(-9px) rotate(-3deg); }
+  46%  { transform: translateX(26px) rotate(5deg); }
+  70%  { transform: translateX(10px) rotate(2deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+@keyframes rr-strike-weapon {
+  0%   { transform: rotate(0deg); }
+  22%  { transform: rotate(-48deg); }
+  46%  { transform: rotate(62deg); }
+  70%  { transform: rotate(28deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes rr-strike-arm {
+  0%   { transform: rotate(0deg); }
+  22%  { transform: rotate(-22deg); }
+  46%  { transform: rotate(34deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.rr-figure[data-pose="strike"] {
+  animation: rr-strike-body 900ms cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+.rr-figure[data-pose="strike"] .rr-weapon {
+  animation: rr-strike-weapon 900ms cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+.rr-figure[data-pose="strike"] .rr-arm-front {
+  animation: rr-strike-arm 900ms cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+
+/* Hit — knocked back, with a squash on the landing.
+ *
+ * Every part starts at the *contact* keyframe of the corresponding rr-strike-*
+ * above, not at rest. The loser is mid-swing when the blow lands, so a reaction
+ * that started from identity snapped the figure back to a neutral pose on the
+ * very frame it was supposed to be driven backwards. Starting from the contact
+ * values makes the reversal continuous, which is what reads as force. Change
+ * these together with the 46% strike keyframes. */
+@keyframes rr-hit-body {
+  0%   { transform: translateX(26px) rotate(5deg) scale(1, 1); }
+  12%  { transform: translateX(-22px) rotate(-11deg) scale(1.06, 0.94); }
+  38%  { transform: translateX(-12px) rotate(-6deg) scale(0.97, 1.03); }
+  70%  { transform: translateX(-5px) rotate(-3deg) scale(1, 1); }
+  100% { transform: translateX(0) rotate(0deg) scale(1, 1); }
+}
+@keyframes rr-hit-head {
+  0%   { transform: rotate(0deg) translateY(0); }
+  12%  { transform: rotate(-14deg) translateY(3px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+/* Follow-through: when the body reverses, the extremities lag a beat before
+   they catch up. Without these the weapon and arm snapped from full extension
+   back to rest the instant the pose changed. */
+@keyframes rr-hit-weapon {
+  0%   { transform: rotate(62deg); }
+  12%  { transform: rotate(84deg); }
+  100% { transform: rotate(6deg); }
+}
+@keyframes rr-hit-arm {
+  0%   { transform: rotate(34deg); }
+  12%  { transform: rotate(46deg); }
+  100% { transform: rotate(0deg); }
+}
+.rr-figure[data-pose="hit"] {
+  animation: rr-hit-body 760ms cubic-bezier(0.2, 0, 0.2, 1) both;
+}
+.rr-figure[data-pose="hit"] .rr-head {
+  animation: rr-hit-head 760ms cubic-bezier(0.2, 0, 0.2, 1) both;
+}
+.rr-figure[data-pose="hit"] .rr-weapon {
+  animation: rr-hit-weapon 760ms cubic-bezier(0.2, 0, 0.2, 1) both;
+}
+.rr-figure[data-pose="hit"] .rr-arm-front {
+  animation: rr-hit-arm 760ms cubic-bezier(0.2, 0, 0.2, 1) both;
+}
+
+/* Victory — weapon up, two bounces, then settle into a breathing idle. */
+@keyframes rr-victory-body {
+  0%   { transform: translateY(0) scale(1, 1); }
+  18%  { transform: translateY(6px) scale(1.05, 0.93); }
+  42%  { transform: translateY(-26px) scale(0.95, 1.07); }
+  62%  { transform: translateY(0) scale(1.04, 0.96); }
+  78%  { transform: translateY(-12px) scale(0.98, 1.03); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+@keyframes rr-victory-weapon {
+  0%   { transform: rotate(0deg); }
+  42%  { transform: rotate(-72deg); }
+  100% { transform: rotate(-58deg); }
+}
+@keyframes rr-victory-arm {
+  0%   { transform: rotate(0deg); }
+  42%  { transform: rotate(-38deg); }
+  100% { transform: rotate(-30deg); }
+}
+.rr-figure[data-pose="victory"] {
+  animation: rr-victory-body 1200ms cubic-bezier(0.28, 0, 0.3, 1) both;
+}
+.rr-figure[data-pose="victory"] .rr-weapon {
+  animation: rr-victory-weapon 1200ms cubic-bezier(0.28, 0, 0.3, 1) both;
+}
+.rr-figure[data-pose="victory"] .rr-arm-front {
+  animation: rr-victory-arm 1200ms cubic-bezier(0.28, 0, 0.3, 1) both;
+}
+.rr-figure[data-pose="victory"] .rr-crown {
+  animation: rr-head-bob 1.8s ease-in-out infinite;
+}
+
+/* Defeat — a held slump, not a one-shot. */
+@keyframes rr-defeat-body {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(7px) rotate(-8deg); }
+}
+@keyframes rr-defeat-head {
+  0%   { transform: rotate(0deg) translateY(0); }
+  100% { transform: rotate(-13deg) translateY(5px); }
+}
+@keyframes rr-defeat-weapon {
+  /* Picks up where rr-hit-weapon left it, so the slump continues the knock-back
+     instead of restarting from rest. */
+  0%   { transform: rotate(6deg); }
+  100% { transform: rotate(34deg); }
+}
+.rr-figure[data-pose="defeat"] {
+  animation: rr-defeat-body 620ms ease-out both;
+}
+.rr-figure[data-pose="defeat"] .rr-head {
+  animation: rr-defeat-head 620ms ease-out both;
+}
+.rr-figure[data-pose="defeat"] .rr-weapon {
+  animation: rr-defeat-weapon 620ms ease-out both;
+}
+
+/* Hitstop — the frame where the blow lands, held.
+ *
+ * Set for ~90ms at the contact keyframe and every part freezes exactly where it
+ * is, mid-swing, then resumes. This is the cheapest weight cue in fight
+ * animation: without it two figures read as passing through each other, with it
+ * they read as hitting something solid. Must come after the pose rules — the
+ * `animation` shorthand they use resets play-state to running, and these
+ * selectors carry the same specificity, so source order is what wins. */
+.rr-figure[data-hitstop="true"],
+.rr-figure[data-hitstop="true"] * {
+  animation-play-state: paused !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * Impact
+ *
+ * Both fire on the contact frame, alongside the hitstop, and both outlast it —
+ * the figures unfreeze at 90ms while these run to 280ms, so the camera is still
+ * settling as the loser starts moving. The freeze is what makes them read: for
+ * the first third of this the figures are motionless and the only thing moving
+ * is the frame around them.
+ * ------------------------------------------------------------------ */
+
+/* Applied to the stage contents, never to the page root. Transforming the root
+   pushed ~19px past the right edge at peak and made the document horizontally
+   scrollable for a quarter second — and `overflow-x: clip` on <html> did not
+   suppress it, since root overflow propagation doesn't clip a transformed
+   descendant here. Sitting inside the arena's existing `overflow-hidden` means
+   the excursion is clipped by an ancestor that already exists, and the flat
+   backdrop stays put underneath, so there's no edge to expose.
+
+   The small punch-in is feel, not necessity: a camera jolting toward the blow
+   beats one sliding sideways. Scale returns to 1 by 100%, so dropping the class
+   at the end can't pop. */
+@keyframes rr-impact-shake {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  12%  { transform: translate3d(-7px, 3px, 0) scale(1.012); }
+  25%  { transform: translate3d(6px, -4px, 0) scale(1.011); }
+  40%  { transform: translate3d(-5px, -2px, 0) scale(1.009); }
+  55%  { transform: translate3d(4px, 3px, 0) scale(1.006); }
+  70%  { transform: translate3d(-2.5px, -1.5px, 0) scale(1.004); }
+  85%  { transform: translate3d(1.5px, 1px, 0) scale(1.002); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+/* Linear on purpose — an eased shake reads as a swing, not a jolt. */
+.rr-impact-shake {
+  animation: rr-impact-shake 280ms linear both;
+}
+
+/* Peaks in about a frame and is essentially gone by 80ms: long enough to
+   register as a hit, short enough not to read as a strobe. Resting opacity is 0
+   so that killing the animation leaves nothing on screen rather than a
+   permanent white wash. */
+@keyframes rr-impact-flash {
+  0%   { opacity: 0; }
+  6%   { opacity: 1; }
+  30%  { opacity: 0.42; }
+  100% { opacity: 0; }
+}
+.rr-impact-flash {
+  opacity: 0;
+  animation: rr-impact-flash 280ms linear both;
+}
+
+/* "still" renders a frozen figure — used by the PNG contact sheets. */
+.rr-figure[data-pose="still"] * {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rr-figure,
+  .rr-figure * {
+    animation: none !important;
+  }
+  /* No camera shake, and no flash at all. A full-bleed brightness spike is the
+     part of this most likely to actually harm someone, so it doesn't get a
+     gentler variant — it just doesn't happen. Both rest at a no-op (transform
+     unset, opacity 0), so cancelling the animation leaves nothing behind. */
+  .rr-impact-shake,
+  .rr-impact-flash {
+    animation: none !important;
+  }
+}

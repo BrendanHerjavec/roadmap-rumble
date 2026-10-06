@@ -1,0 +1,35 @@
+{
+  "name": "roadmap-rumble",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seed:transcripts": "tsx scripts/generate-transcripts.ts",
+    "mine": "tsx scripts/mine.ts",
+    "verify:seed": "tsx scripts/verify-seed.ts",
+    "sheet": "tsx scripts/contact-sheet.ts",
+    "simulate:demo": "tsx scripts/simulate-demo.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
+    "@supabase/supabase-js": "^2.112.2",
+    "motion": "^13.1.0",
+    "next": "16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "dotenv": "latest",
+    "tailwindcss": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

@@ -1,0 +1,1268 @@
+{
+  "generatedAt": "2026-08-11T21:07:19.458Z",
+  "method": "lexicon",
+  "transcriptCount": 40,
+  "threshold": 5,
+  "candidates": [
+    {
+      "featureKey": "bulk-edit",
+      "name": "Bulk Task Surgery",
+      "description": "Multi-select tasks and change owner, date, or status across hundreds of rows at once.",
+      "problem": "Owner, date and status change one task at a time. A two-week slip is eighty manual edits, and a departure is two hours of clicking.",
+      "counterweight": "The most-mentioned item in the whole corpus, worth $31k. It's a retention and daily-satisfaction problem rather than a sales one — which is precisely why it never shows up in a lost-deal reason.",
+      "calls": 24,
+      "lostDeals": 1,
+      "revenueAtStake": 31000,
+      "firstMentioned": "2025-02-04",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-014",
+          "company": "Copperfield Retail Group",
+          "date": "2025-02-04",
+          "quote": "When a project slips two weeks I have to open eighty tasks and change eighty due dates. One at a time."
+        },
+        {
+          "callId": "NW-015",
+          "company": "Ashford Legal Services",
+          "date": "2025-02-25",
+          "quote": "Give me a checkbox and a change-owner button and you've saved me an afternoon a week."
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "Somebody left the team last month. Reassigning their work took me two hours of clicking."
+        },
+        {
+          "callId": "NW-017",
+          "company": "Pulsewave Software",
+          "date": "2025-04-09",
+          "quote": "Bulk edit isn't glamorous but it's the difference between the tool helping and the tool being a chore."
+        },
+        {
+          "callId": "NW-019",
+          "company": "Wexler Brand Partners",
+          "date": "2025-06-17",
+          "quote": "Every single person on my team has complained about not being able to change more than one task at a time."
+        },
+        {
+          "callId": "NW-020",
+          "company": "Silverbrook Property Group",
+          "date": "2025-07-08",
+          "quote": "I can select multiple tasks but the only thing I can do with the selection is delete them, which is terrifying."
+        },
+        {
+          "callId": "NW-021",
+          "company": "Kestrel Field Services",
+          "date": "2025-08-13",
+          "quote": "Multi-select and bulk edit. That's it, that's the whole request."
+        },
+        {
+          "callId": "NW-027",
+          "company": "Nordhaven Outfitters",
+          "date": "2026-01-06",
+          "quote": "It comes down to Slack integration was one-way notifications only and editing tasks one at a time was untenable at that volume. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Nordhaven Outfitters",
+          "dealSizeUsd": 31000,
+          "date": "2026-01-06"
+        }
+      ]
+    },
+    {
+      "featureKey": "guest-access",
+      "name": "Guest Passes",
+      "description": "Free, scoped external collaborators so clients and agencies participate without a paid seat.",
+      "problem": "External clients and agencies need a paid seat to see anything, so teams email screenshots and approvals happen outside the tool.",
+      "counterweight": "The loudest ask in the corpus by a wide margin — and a pricing decision, not just a product one. Free guest seats may cost more in seat revenue than the deals they win.",
+      "calls": 22,
+      "lostDeals": 5,
+      "revenueAtStake": 553000,
+      "firstMentioned": "2024-11-19",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-011",
+          "company": "Harborlight Media",
+          "date": "2024-11-19",
+          "quote": "Can a guest comment and approve without being able to wander into other projects?"
+        },
+        {
+          "callId": "NW-014",
+          "company": "Copperfield Retail Group",
+          "date": "2025-02-04",
+          "quote": "Today we email screenshots to clients. It's 2026 and we are emailing screenshots."
+        },
+        {
+          "callId": "NW-015",
+          "company": "Ashford Legal Services",
+          "date": "2025-02-25",
+          "quote": "Half the people on any given project don't work here. Am I buying seats for our clients?"
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "Our agency partners live in this tool with us or the whole thing falls apart."
+        },
+        {
+          "callId": "NW-017",
+          "company": "Pulsewave Software",
+          "date": "2025-04-09",
+          "quote": "We need guest access. Client comes in, sees their project, sees nothing else, costs me nothing."
+        },
+        {
+          "callId": "NW-019",
+          "company": "Wexler Brand Partners",
+          "date": "2025-06-17",
+          "quote": "The approval loop is the bottleneck, and the approver is always someone outside the company."
+        },
+        {
+          "callId": "NW-020",
+          "company": "Silverbrook Property Group",
+          "date": "2025-07-08",
+          "quote": "If every external reviewer needs a full license this gets expensive fast, and my CFO will notice."
+        },
+        {
+          "callId": "NW-022",
+          "company": "Marchetti Foods",
+          "date": "2025-09-16",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; and no dependency-aware timeline for the delivery plan. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-024",
+          "company": "Brightline Facilities",
+          "date": "2025-11-11",
+          "quote": "It comes down to mobile app unusable on job sites without connectivity; external client collaboration would have required paying for every guest seat; and no workload or capacity view to prevent over-allocating the team. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-034",
+          "company": "Alderwood Home Services",
+          "date": "2026-04-28",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; no dependency-aware timeline for the delivery plan; and mobile app unusable on job sites without connectivity. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Fernwood Construction",
+          "dealSizeUsd": 138000,
+          "date": "2025-03-19"
+        },
+        {
+          "company": "Silverbrook Property Group",
+          "dealSizeUsd": 127000,
+          "date": "2025-07-08"
+        },
+        {
+          "company": "Alderwood Home Services",
+          "dealSizeUsd": 118000,
+          "date": "2026-04-28"
+        },
+        {
+          "company": "Brightline Facilities",
+          "dealSizeUsd": 96000,
+          "date": "2025-11-11"
+        },
+        {
+          "company": "Marchetti Foods",
+          "dealSizeUsd": 74000,
+          "date": "2025-09-16"
+        }
+      ]
+    },
+    {
+      "featureKey": "capacity-planning",
+      "name": "Workload Radar",
+      "description": "Capacity view showing who is over-allocated across every project before the sprint starts.",
+      "problem": "Nobody can see who is over-allocated across projects until they say so, and resourcing lives in a spreadsheet that's wrong the moment it's saved.",
+      "counterweight": "Nineteen calls, and the fastest-rising thing in the backlog — first raised barely a year ago. Trajectory, not just volume.",
+      "calls": 19,
+      "lostDeals": 4,
+      "revenueAtStake": 415000,
+      "firstMentioned": "2025-06-17",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-019",
+          "company": "Wexler Brand Partners",
+          "date": "2025-06-17",
+          "quote": "We're on a resourcing spreadsheet that is wrong roughly four minutes after saving, which is why I'm on this call."
+        },
+        {
+          "callId": "NW-020",
+          "company": "Silverbrook Property Group",
+          "date": "2025-07-08",
+          "quote": "If I assign one more task to someone at a hundred and twenty percent, the tool should tell me."
+        },
+        {
+          "callId": "NW-021",
+          "company": "Kestrel Field Services",
+          "date": "2025-08-13",
+          "quote": "I want a workload view. People down one axis, weeks across the top, red where they're over."
+        },
+        {
+          "callId": "NW-022",
+          "company": "Marchetti Foods",
+          "date": "2025-09-16",
+          "quote": "I have no idea who is drowning until they tell me they're drowning, and by then it's late."
+        },
+        {
+          "callId": "NW-023",
+          "company": "Aperture Biotech",
+          "date": "2025-10-21",
+          "quote": "Show me utilisation by person, and let me drag work to someone with room."
+        },
+        {
+          "callId": "NW-024",
+          "company": "Brightline Facilities",
+          "date": "2025-11-11",
+          "quote": "Resourcing conversations happen in a spreadsheet that's wrong the moment I save it."
+        },
+        {
+          "callId": "NW-025",
+          "company": "Thornbury Publishing",
+          "date": "2025-12-02",
+          "quote": "Our designers sit on six projects each. Nobody can see the total, including the designers."
+        },
+        {
+          "callId": "NW-030",
+          "company": "Larkspur Hospitality",
+          "date": "2026-02-24",
+          "quote": "Capacity planning is the reason I'm shopping. Everything else we have."
+        },
+        {
+          "callId": "NW-034",
+          "company": "Alderwood Home Services",
+          "date": "2026-04-28",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; no dependency-aware timeline for the delivery plan; and mobile app unusable on job sites without connectivity. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Silverbrook Property Group",
+          "dealSizeUsd": 127000,
+          "date": "2025-07-08"
+        },
+        {
+          "company": "Alderwood Home Services",
+          "dealSizeUsd": 118000,
+          "date": "2026-04-28"
+        },
+        {
+          "company": "Brightline Facilities",
+          "dealSizeUsd": 96000,
+          "date": "2025-11-11"
+        },
+        {
+          "company": "Marchetti Foods",
+          "dealSizeUsd": 74000,
+          "date": "2025-09-16"
+        }
+      ]
+    },
+    {
+      "featureKey": "timeline-view",
+      "name": "Timeline View",
+      "description": "Dependency-aware Gantt timeline with drag-to-reschedule and automatic downstream shifts.",
+      "problem": "No dependency-aware schedule. A slipped milestone moves nothing downstream, and the exec schedule gets rebuilt by hand every week.",
+      "counterweight": "Seventeen calls, but often a request on behalf of a stakeholder who will never log in. Worth asking whether the buyer wants the view or wants the slide.",
+      "calls": 17,
+      "lostDeals": 3,
+      "revenueAtStake": 330000,
+      "firstMentioned": "2024-08-22",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-008",
+          "company": "Vantage Point Logistics",
+          "date": "2024-08-22",
+          "quote": "Can I see the critical path? When something slips I need to know immediately whether the launch date moved."
+        },
+        {
+          "callId": "NW-009",
+          "company": "Lumen Learning Partners",
+          "date": "2024-09-17",
+          "quote": "Every client kickoff starts with a schedule slide. I'm rebuilding that slide by hand every single week."
+        },
+        {
+          "callId": "NW-010",
+          "company": "Ironhall Insurance",
+          "date": "2024-10-03",
+          "quote": "My exec team thinks in Gantt charts. I can hand them a board and they will hand it straight back."
+        },
+        {
+          "callId": "NW-011",
+          "company": "Harborlight Media",
+          "date": "2024-11-19",
+          "quote": "We need a timeline view. Not a calendar, a real timeline with dependencies drawn on it."
+        },
+        {
+          "callId": "NW-012",
+          "company": "Sable Ridge Pharmaceuticals",
+          "date": "2024-12-10",
+          "quote": "If I move one milestone, everything after it should move too. Does it do that?"
+        },
+        {
+          "callId": "NW-013",
+          "company": "Quantile Analytics",
+          "date": "2025-01-14",
+          "quote": "The board view is great for the team and useless for my steering committee."
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no native time tracking, forcing a second tool for billing; no dependency-aware timeline for the delivery plan; and custom fields too limited to model their intake process. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-022",
+          "company": "Marchetti Foods",
+          "date": "2025-09-16",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; and no dependency-aware timeline for the delivery plan. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-034",
+          "company": "Alderwood Home Services",
+          "date": "2026-04-28",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; no dependency-aware timeline for the delivery plan; and mobile app unusable on job sites without connectivity. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Fernwood Construction",
+          "dealSizeUsd": 138000,
+          "date": "2025-03-19"
+        },
+        {
+          "company": "Alderwood Home Services",
+          "dealSizeUsd": 118000,
+          "date": "2026-04-28"
+        },
+        {
+          "company": "Marchetti Foods",
+          "dealSizeUsd": 74000,
+          "date": "2025-09-16"
+        }
+      ]
+    },
+    {
+      "featureKey": "custom-fields",
+      "name": "Custom Fields",
+      "description": "User-defined typed fields on tasks and projects, filterable and reportable everywhere.",
+      "problem": "Intake data has nowhere to live, so teams overload tags and end up with four hundred of them and no way to report.",
+      "counterweight": "Fifteen calls, and a foundation other things stand on — reporting, filtering and automation all get harder to build without it. Cheap to underrate.",
+      "calls": 15,
+      "lostDeals": 2,
+      "revenueAtStake": 265000,
+      "firstMentioned": "2025-02-25",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-015",
+          "company": "Ashford Legal Services",
+          "date": "2025-02-25",
+          "quote": "We tried using tags for this and ended up with four hundred tags. It's a mess."
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "Formula fields would be a nice-to-have, plain custom fields are the requirement."
+        },
+        {
+          "callId": "NW-017",
+          "company": "Pulsewave Software",
+          "date": "2025-04-09",
+          "quote": "Can I add a dropdown field and then filter the whole workspace by it?"
+        },
+        {
+          "callId": "NW-019",
+          "company": "Wexler Brand Partners",
+          "date": "2025-06-17",
+          "quote": "Custom fields need to work in reporting too, otherwise what's the point of capturing them."
+        },
+        {
+          "callId": "NW-020",
+          "company": "Silverbrook Property Group",
+          "date": "2025-07-08",
+          "quote": "Our intake form has nine questions. All nine need somewhere to live on the task."
+        },
+        {
+          "callId": "NW-021",
+          "company": "Kestrel Field Services",
+          "date": "2025-08-13",
+          "quote": "Every request has a client code and a billing type. Those need to be real fields, not text in the description."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Fernwood Construction",
+          "dealSizeUsd": 138000,
+          "date": "2025-03-19"
+        },
+        {
+          "company": "Silverbrook Property Group",
+          "dealSizeUsd": 127000,
+          "date": "2025-07-08"
+        }
+      ]
+    },
+    {
+      "featureKey": "slack-sync",
+      "name": "Slack Two-Way",
+      "description": "Bidirectional Slack sync so a thread reply lands on the task and a task update lands in channel.",
+      "problem": "The integration is one-way. A reply in a Slack thread never reaches the task, so the tool and the conversation drift apart.",
+      "counterweight": "Thirteen calls and $31k. Genuinely loved and genuinely not worth money — nobody has bought or refused to buy over it.",
+      "calls": 13,
+      "lostDeals": 1,
+      "revenueAtStake": 31000,
+      "firstMentioned": "2025-04-09",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-017",
+          "company": "Pulsewave Software",
+          "date": "2025-04-09",
+          "quote": "It's Slack, entirely Slack, with a tool they open when someone nags them, and it works right up until it doesn't."
+        },
+        {
+          "callId": "NW-019",
+          "company": "Wexler Brand Partners",
+          "date": "2025-06-17",
+          "quote": "We'd want per-channel routing, so the design channel only hears about design work."
+        },
+        {
+          "callId": "NW-021",
+          "company": "Kestrel Field Services",
+          "date": "2025-08-13",
+          "quote": "Notifications into a channel is the easy half. I want a reply in the thread to post back as a comment."
+        },
+        {
+          "callId": "NW-022",
+          "company": "Marchetti Foods",
+          "date": "2025-09-16",
+          "quote": "My team lives in Slack. If they have to leave Slack to update a task, they won't update the task."
+        },
+        {
+          "callId": "NW-023",
+          "company": "Aperture Biotech",
+          "date": "2025-10-21",
+          "quote": "The integration you have now is one-way and everybody ignores it."
+        },
+        {
+          "callId": "NW-024",
+          "company": "Brightline Facilities",
+          "date": "2025-11-11",
+          "quote": "Honestly the tool that wins here is the one that makes Slack the interface."
+        },
+        {
+          "callId": "NW-027",
+          "company": "Nordhaven Outfitters",
+          "date": "2026-01-06",
+          "quote": "It comes down to Slack integration was one-way notifications only and editing tasks one at a time was untenable at that volume. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-038",
+          "company": "Ferrocast Metals",
+          "date": "2026-06-30",
+          "quote": "Can I create a task from a Slack message? That's the moment the work actually gets named."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Nordhaven Outfitters",
+          "dealSizeUsd": 31000,
+          "date": "2026-01-06"
+        }
+      ]
+    },
+    {
+      "featureKey": "time-tracking",
+      "name": "Time Tracking",
+      "description": "Native time entry against tasks, with rollups per person, project, and billing period.",
+      "problem": "Hours live in a second tool, so billable work goes unlogged and someone reconciles a spreadsheet every Friday.",
+      "counterweight": "Asked for constantly by agencies and consultancies, and shipped by every competitor. Table stakes rather than differentiation — losing without it is more likely than winning with it.",
+      "calls": 12,
+      "lostDeals": 3,
+      "revenueAtStake": 326000,
+      "firstMentioned": "2024-06-11",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-006",
+          "company": "Calder & Roe Consulting",
+          "date": "2024-06-11",
+          "quote": "Can you start a timer on a task? That's the whole ask."
+        },
+        {
+          "callId": "NW-007",
+          "company": "Tessellate Design Co.",
+          "date": "2024-07-24",
+          "quote": "We bill clients hourly. If time doesn't live next to the task, people don't log it, and then we don't invoice it."
+        },
+        {
+          "callId": "NW-008",
+          "company": "Vantage Point Logistics",
+          "date": "2024-08-22",
+          "quote": "The finance team pulls timesheets on the second. If that's a manual export I'm the one doing it."
+        },
+        {
+          "callId": "NW-009",
+          "company": "Lumen Learning Partners",
+          "date": "2024-09-17",
+          "quote": "We need hours rolled up by project for month end. Doesn't have to be fancy."
+        },
+        {
+          "callId": "NW-011",
+          "company": "Harborlight Media",
+          "date": "2024-11-19",
+          "quote": "Right now the team tracks hours in a spreadsheet and someone reconciles it every Friday. It's genuinely miserable."
+        },
+        {
+          "callId": "NW-014",
+          "company": "Copperfield Retail Group",
+          "date": "2025-02-04",
+          "quote": "I'd want to see estimated versus actual on every task, otherwise our estimates never improve."
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no native time tracking, forcing a second tool for billing; no dependency-aware timeline for the delivery plan; and custom fields too limited to model their intake process. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-020",
+          "company": "Silverbrook Property Group",
+          "date": "2025-07-08",
+          "quote": "It comes down to external client collaboration would have required paying for every guest seat; no workload or capacity view to prevent over-allocating the team; no native time tracking, forcing a second tool for billing; and custom fields too limited to model their intake process. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Fernwood Construction",
+          "dealSizeUsd": 138000,
+          "date": "2025-03-19"
+        },
+        {
+          "company": "Silverbrook Property Group",
+          "dealSizeUsd": 127000,
+          "date": "2025-07-08"
+        },
+        {
+          "company": "Tessellate Design Co.",
+          "dealSizeUsd": 61000,
+          "date": "2024-07-24"
+        }
+      ]
+    },
+    {
+      "featureKey": "audit-log",
+      "name": "Audit Trail",
+      "description": "Immutable, exportable log of every change to a project, task, or permission.",
+      "problem": "Nobody can answer “who changed this, and when”. A due date moves with no author attached, and an auditor asking for a change log gets an activity feed nobody can archive.",
+      "counterweight": "Seven lost deals, but every one died at security review — late, after months of sales effort. The real cost isn't only the ARR, it's the cycle time spent reaching a gate we always fail.",
+      "calls": 11,
+      "lostDeals": 7,
+      "revenueAtStake": 2171000,
+      "firstMentioned": "2024-01-18",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-001",
+          "company": "Halberd Financial Group",
+          "date": "2024-01-18",
+          "quote": "The tool we're on now has an audit export and that's genuinely the only reason we still pay for it."
+        },
+        {
+          "callId": "NW-002",
+          "company": "Corvine Health Systems Supply",
+          "date": "2024-02-27",
+          "quote": "Right now if a due date moves, nobody can tell me who moved it. That's the whole problem."
+        },
+        {
+          "callId": "NW-003",
+          "company": "Bright Meridian Studios",
+          "date": "2024-03-12",
+          "quote": "We need a full audit history. Every edit, every access change, with a timestamp and a person attached."
+        },
+        {
+          "callId": "NW-004",
+          "company": "Northgate Utilities",
+          "date": "2024-04-16",
+          "quote": "Internal audit does a quarterly pull. If I can't hand them a change log for the whole workspace, this doesn't get through review."
+        },
+        {
+          "callId": "NW-005",
+          "company": "Ridgeline Manufacturing",
+          "date": "2024-05-08",
+          "quote": "SOC 2 auditors want evidence. An activity feed in the UI isn't evidence, I need a CSV I can archive."
+        },
+        {
+          "callId": "NW-006",
+          "company": "Calder & Roe Consulting",
+          "date": "2024-06-11",
+          "quote": "Our compliance team is going to ask who changed what and when. Can you export that?"
+        },
+        {
+          "callId": "NW-007",
+          "company": "Tessellate Design Co.",
+          "date": "2024-07-24",
+          "quote": "Does the history go back forever, or does it roll off? Because a ninety day window is useless to us."
+        },
+        {
+          "callId": "NW-010",
+          "company": "Ironhall Insurance",
+          "date": "2024-10-03",
+          "quote": "It comes down to no portfolio-level roll-up for leadership reporting; no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; and permissions too coarse to keep contractors out of internal projects. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-012",
+          "company": "Sable Ridge Pharmaceuticals",
+          "date": "2024-12-10",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; and no portfolio-level roll-up for leadership reporting. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-013",
+          "company": "Quantile Analytics",
+          "date": "2025-01-14",
+          "quote": "It comes down to API rate limits too low to sync the data warehouse; no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; and no portfolio-level roll-up for leadership reporting. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-018",
+          "company": "Grantham Aerospace Components",
+          "date": "2025-05-21",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; no portfolio-level roll-up for leadership reporting; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Sable Ridge Pharmaceuticals",
+          "dealSizeUsd": 420000,
+          "date": "2024-12-10"
+        },
+        {
+          "company": "Ironhall Insurance",
+          "dealSizeUsd": 385000,
+          "date": "2024-10-03"
+        },
+        {
+          "company": "Grantham Aerospace Components",
+          "dealSizeUsd": 341000,
+          "date": "2025-05-21"
+        },
+        {
+          "company": "Corvine Health Systems Supply",
+          "dealSizeUsd": 310000,
+          "date": "2024-02-27"
+        },
+        {
+          "company": "Northgate Utilities",
+          "dealSizeUsd": 298000,
+          "date": "2024-04-16"
+        },
+        {
+          "company": "Ridgeline Manufacturing",
+          "dealSizeUsd": 225000,
+          "date": "2024-05-08"
+        },
+        {
+          "company": "Quantile Analytics",
+          "dealSizeUsd": 192000,
+          "date": "2025-01-14"
+        }
+      ]
+    },
+    {
+      "featureKey": "granular-permissions",
+      "name": "Permission Grid",
+      "description": "Role-based access down to the project and field level, so contractors see only their slice.",
+      "problem": "Roles are workspace-wide, so a contractor invited to one project can read every project in the workspace, budgets included.",
+      "counterweight": "Usually raised by the same buyers who raise single sign-on, so some of this revenue is double-counted against it. Shipping one without the other may not actually unblock the deal.",
+      "calls": 10,
+      "lostDeals": 6,
+      "revenueAtStake": 2071000,
+      "firstMentioned": "2024-04-16",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-004",
+          "company": "Northgate Utilities",
+          "date": "2024-04-16",
+          "quote": "Can I lock a specific field? The cost field should be visible to four people and nobody else."
+        },
+        {
+          "callId": "NW-005",
+          "company": "Ridgeline Manufacturing",
+          "date": "2024-05-08",
+          "quote": "Legal asked me whether a contractor could see the whole workspace. The honest answer was yes, and that ended the conversation."
+        },
+        {
+          "callId": "NW-006",
+          "company": "Calder & Roe Consulting",
+          "date": "2024-06-11",
+          "quote": "I want project-level roles, not just workspace-level. That's the gap."
+        },
+        {
+          "callId": "NW-007",
+          "company": "Tessellate Design Co.",
+          "date": "2024-07-24",
+          "quote": "Admin or member is not enough. I need someone who can comment but can't reassign work."
+        },
+        {
+          "callId": "NW-008",
+          "company": "Vantage Point Logistics",
+          "date": "2024-08-22",
+          "quote": "Everyone being able to delete anything makes my leadership nervous, and honestly it makes me nervous."
+        },
+        {
+          "callId": "NW-009",
+          "company": "Lumen Learning Partners",
+          "date": "2024-09-17",
+          "quote": "We have three agencies in here. They absolutely cannot see each other's projects, or each other's budgets."
+        },
+        {
+          "callId": "NW-010",
+          "company": "Ironhall Insurance",
+          "date": "2024-10-03",
+          "quote": "It comes down to no portfolio-level roll-up for leadership reporting; no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; and permissions too coarse to keep contractors out of internal projects. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-012",
+          "company": "Sable Ridge Pharmaceuticals",
+          "date": "2024-12-10",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; and no portfolio-level roll-up for leadership reporting. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-018",
+          "company": "Grantham Aerospace Components",
+          "date": "2025-05-21",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; no portfolio-level roll-up for leadership reporting; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-032",
+          "company": "Meridian Trust Bank",
+          "date": "2026-03-31",
+          "quote": "It comes down to no contractual uptime SLA for procurement; no SAML single sign-on, which IT treated as non-negotiable; permissions too coarse to keep contractors out of internal projects; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Sable Ridge Pharmaceuticals",
+          "dealSizeUsd": 420000,
+          "date": "2024-12-10"
+        },
+        {
+          "company": "Meridian Trust Bank",
+          "dealSizeUsd": 402000,
+          "date": "2026-03-31"
+        },
+        {
+          "company": "Ironhall Insurance",
+          "dealSizeUsd": 385000,
+          "date": "2024-10-03"
+        },
+        {
+          "company": "Grantham Aerospace Components",
+          "dealSizeUsd": 341000,
+          "date": "2025-05-21"
+        },
+        {
+          "company": "Northgate Utilities",
+          "dealSizeUsd": 298000,
+          "date": "2024-04-16"
+        },
+        {
+          "company": "Ridgeline Manufacturing",
+          "dealSizeUsd": 225000,
+          "date": "2024-05-08"
+        }
+      ]
+    },
+    {
+      "featureKey": "saml-sso",
+      "name": "Single Sign-On",
+      "description": "SAML and SCIM so accounts provision and deprovision through the company identity provider.",
+      "problem": "IT can't provision or deprovision through the company identity provider. Every user is a separate password, and a leaver keeps their access until someone remembers.",
+      "counterweight": "Only nine calls mention it because it rarely survives to a second conversation — it's a qualification gate, not a feature request. A low mention count here means the opposite of low demand.",
+      "calls": 9,
+      "lostDeals": 9,
+      "revenueAtStake": 2634000,
+      "firstMentioned": "2024-02-27",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-002",
+          "company": "Corvine Health Systems Supply",
+          "date": "2024-02-27",
+          "quote": "When someone leaves the company, IT deactivates them in one place and expects it to propagate. Does that work here?"
+        },
+        {
+          "callId": "NW-004",
+          "company": "Northgate Utilities",
+          "date": "2024-04-16",
+          "quote": "Security review is going to bounce this immediately without SSO. I've watched it happen twice this year."
+        },
+        {
+          "callId": "NW-005",
+          "company": "Ridgeline Manufacturing",
+          "date": "2024-05-08",
+          "quote": "SCIM provisioning matters more than SSO honestly. Manually adding four hundred people is not happening."
+        },
+        {
+          "callId": "NW-007",
+          "company": "Tessellate Design Co.",
+          "date": "2024-07-24",
+          "quote": "I'll be blunt, single sign-on is a gate. Everything else we can work around."
+        },
+        {
+          "callId": "NW-010",
+          "company": "Ironhall Insurance",
+          "date": "2024-10-03",
+          "quote": "We're an Okta shop. Everything has to sign in through Okta, no exceptions."
+        },
+        {
+          "callId": "NW-012",
+          "company": "Sable Ridge Pharmaceuticals",
+          "date": "2024-12-10",
+          "quote": "Before we go further, do you support SAML? Because our IT team will not approve a tool with separate passwords."
+        },
+        {
+          "callId": "NW-013",
+          "company": "Quantile Analytics",
+          "date": "2025-01-14",
+          "quote": "It comes down to API rate limits too low to sync the data warehouse; no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; and no portfolio-level roll-up for leadership reporting. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-018",
+          "company": "Grantham Aerospace Components",
+          "date": "2025-05-21",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; no portfolio-level roll-up for leadership reporting; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        },
+        {
+          "callId": "NW-032",
+          "company": "Meridian Trust Bank",
+          "date": "2026-03-31",
+          "quote": "It comes down to no contractual uptime SLA for procurement; no SAML single sign-on, which IT treated as non-negotiable; permissions too coarse to keep contractors out of internal projects; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Sable Ridge Pharmaceuticals",
+          "dealSizeUsd": 420000,
+          "date": "2024-12-10"
+        },
+        {
+          "company": "Meridian Trust Bank",
+          "dealSizeUsd": 402000,
+          "date": "2026-03-31"
+        },
+        {
+          "company": "Ironhall Insurance",
+          "dealSizeUsd": 385000,
+          "date": "2024-10-03"
+        },
+        {
+          "company": "Grantham Aerospace Components",
+          "dealSizeUsd": 341000,
+          "date": "2025-05-21"
+        },
+        {
+          "company": "Corvine Health Systems Supply",
+          "dealSizeUsd": 310000,
+          "date": "2024-02-27"
+        },
+        {
+          "company": "Northgate Utilities",
+          "dealSizeUsd": 298000,
+          "date": "2024-04-16"
+        },
+        {
+          "company": "Ridgeline Manufacturing",
+          "dealSizeUsd": 225000,
+          "date": "2024-05-08"
+        },
+        {
+          "company": "Quantile Analytics",
+          "dealSizeUsd": 192000,
+          "date": "2025-01-14"
+        },
+        {
+          "company": "Tessellate Design Co.",
+          "dealSizeUsd": 61000,
+          "date": "2024-07-24"
+        }
+      ]
+    },
+    {
+      "featureKey": "portfolio-rollup",
+      "name": "Portfolio Roll-Up",
+      "description": "One cross-project view of status, spend, and risk for leadership, updated without manual reporting.",
+      "problem": "Leadership has no cross-project view, so the PMO spends the first two days of every month assembling a status deck by hand.",
+      "counterweight": "Only seven calls, but every one came from a buyer running sixty-plus projects — the largest seat counts and the slowest churn in the pipeline.",
+      "calls": 7,
+      "lostDeals": 4,
+      "revenueAtStake": 1338000,
+      "firstMentioned": "2024-10-03",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-010",
+          "company": "Ironhall Insurance",
+          "date": "2024-10-03",
+          "quote": "Right now it's a PMO that reports upward in slides and downward in email. Nobody's proud of it."
+        },
+        {
+          "callId": "NW-011",
+          "company": "Harborlight Media",
+          "date": "2024-11-19",
+          "quote": "Leadership wants a portfolio view. Status, spend, and risk across every program in one place."
+        },
+        {
+          "callId": "NW-012",
+          "company": "Sable Ridge Pharmaceuticals",
+          "date": "2024-12-10",
+          "quote": "My PMO spends the first two days of every month assembling a status deck by hand. That's the thing I'm trying to kill."
+        },
+        {
+          "callId": "NW-013",
+          "company": "Quantile Analytics",
+          "date": "2025-01-14",
+          "quote": "I run sixty projects. I need one screen that tells me which ones are red, without opening sixty tabs."
+        },
+        {
+          "callId": "NW-014",
+          "company": "Copperfield Retail Group",
+          "date": "2025-02-04",
+          "quote": "Can I group projects into programs, and programs into a portfolio? Three levels, basically."
+        },
+        {
+          "callId": "NW-018",
+          "company": "Grantham Aerospace Components",
+          "date": "2025-05-21",
+          "quote": "It comes down to no SAML single sign-on, which IT treated as non-negotiable; no exportable audit history for the compliance team; permissions too coarse to keep contractors out of internal projects; no portfolio-level roll-up for leadership reporting; and API rate limits too low to sync the data warehouse. Everything else we could have lived with."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Sable Ridge Pharmaceuticals",
+          "dealSizeUsd": 420000,
+          "date": "2024-12-10"
+        },
+        {
+          "company": "Ironhall Insurance",
+          "dealSizeUsd": 385000,
+          "date": "2024-10-03"
+        },
+        {
+          "company": "Grantham Aerospace Components",
+          "dealSizeUsd": 341000,
+          "date": "2025-05-21"
+        },
+        {
+          "company": "Quantile Analytics",
+          "dealSizeUsd": 192000,
+          "date": "2025-01-14"
+        }
+      ]
+    },
+    {
+      "featureKey": "api-rate-limits",
+      "name": "API Throughput",
+      "description": "Higher API rate limits and bulk endpoints so large workspaces can sync without backing off.",
+      "problem": "Rate limits are too low for a nightly warehouse sync, so integration jobs back off and an eleven-hour window isn't enough.",
+      "counterweight": "Five calls and $935k — the highest revenue-per-mention in the backlog. Everyone who raises it is technical, large, and already committed to integrating.",
+      "calls": 5,
+      "lostDeals": 3,
+      "revenueAtStake": 935000,
+      "firstMentioned": "2025-01-14",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-013",
+          "company": "Quantile Analytics",
+          "date": "2025-01-14",
+          "quote": "We sync everything into Snowflake nightly. At your current rate limit that job takes eleven hours."
+        },
+        {
+          "callId": "NW-014",
+          "company": "Copperfield Retail Group",
+          "date": "2025-02-04",
+          "quote": "Our integration team hit your rate limit in the trial. That's not a great sign for production."
+        },
+        {
+          "callId": "NW-016",
+          "company": "Fernwood Construction",
+          "date": "2025-03-19",
+          "quote": "Is there a bulk endpoint? Paginating a hundred thousand tasks at that limit is not viable."
+        },
+        {
+          "callId": "NW-018",
+          "company": "Grantham Aerospace Components",
+          "date": "2025-05-21",
+          "quote": "We'd need a much higher API ceiling, and ideally webhooks so we're not polling at all."
+        },
+        {
+          "callId": "NW-032",
+          "company": "Meridian Trust Bank",
+          "date": "2026-03-31",
+          "quote": "Everything we buy has to feed the warehouse. If the API can't keep up, it doesn't get bought."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Meridian Trust Bank",
+          "dealSizeUsd": 402000,
+          "date": "2026-03-31"
+        },
+        {
+          "company": "Grantham Aerospace Components",
+          "dealSizeUsd": 341000,
+          "date": "2025-05-21"
+        },
+        {
+          "company": "Quantile Analytics",
+          "dealSizeUsd": 192000,
+          "date": "2025-01-14"
+        }
+      ]
+    }
+  ],
+  "belowThreshold": [
+    {
+      "featureKey": "template-marketplace",
+      "name": "Template Market",
+      "description": "Shared library of project templates teams can publish internally and pull from.",
+      "problem": "Every project manager sets projects up differently, so conventions live in people's heads and new starters spend their first week learning them.",
+      "counterweight": "$19k of lost deals makes this look trivial, but every new customer hits it in week one. It's an onboarding-time lever, and onboarding time is a leading indicator ARR can't see.",
+      "calls": 4,
+      "lostDeals": 1,
+      "revenueAtStake": 19000,
+      "firstMentioned": "2026-02-24",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-030",
+          "company": "Larkspur Hospitality",
+          "date": "2026-02-24",
+          "quote": "We'd publish our own templates internally if you gave us somewhere to put them."
+        },
+        {
+          "callId": "NW-032",
+          "company": "Meridian Trust Bank",
+          "date": "2026-03-31",
+          "quote": "Is there a template gallery? Even a basic one would save the onboarding conversation."
+        },
+        {
+          "callId": "NW-033",
+          "company": "Fielding Sports Group",
+          "date": "2026-04-14",
+          "quote": "New PMs spend their first week figuring out our conventions. A template would just tell them."
+        },
+        {
+          "callId": "NW-037",
+          "company": "Kite & Compass Travel",
+          "date": "2026-06-09",
+          "quote": "Every project manager sets up projects differently. I want one blessed template everyone starts from."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Kite & Compass Travel",
+          "dealSizeUsd": 19000,
+          "date": "2026-06-09"
+        }
+      ]
+    },
+    {
+      "featureKey": "recurring-tasks",
+      "name": "Recurring Tasks",
+      "description": "Tasks and checklists that regenerate on a schedule without anyone remembering to clone them.",
+      "problem": "Repeating checklists are duplicated by hand every cycle, and someone has to remember to do it.",
+      "counterweight": "Four calls, no lost deals, and probably a week of work. The kind of item that never wins a vote and never stops being asked for.",
+      "calls": 4,
+      "lostDeals": 0,
+      "revenueAtStake": 0,
+      "firstMentioned": "2026-01-20",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-028",
+          "company": "Cobalt Street Architects",
+          "date": "2026-01-20",
+          "quote": "I'd want the recurrence to skip weekends, but that's detail."
+        },
+        {
+          "callId": "NW-029",
+          "company": "Vireo Renewables",
+          "date": "2026-02-10",
+          "quote": "Recurring maintenance work is maybe forty percent of what we do."
+        },
+        {
+          "callId": "NW-030",
+          "company": "Larkspur Hospitality",
+          "date": "2026-02-24",
+          "quote": "We run the same twelve-step checklist every month. Someone duplicates it by hand every month."
+        },
+        {
+          "callId": "NW-040",
+          "company": "Waverly Credit Union",
+          "date": "2026-07-28",
+          "quote": "Can a task repeat weekly? Genuinely surprised that's not in here."
+        }
+      ],
+      "lostDealCompanies": []
+    },
+    {
+      "featureKey": "offline-mobile",
+      "name": "Offline Mode",
+      "description": "Mobile app that keeps working on a job site with no signal and syncs when it reconnects.",
+      "problem": "Field crews lose signal on site and the app stalls, so work orders go back to paper and sync never happens.",
+      "counterweight": "Three calls, two of them lost deals. A narrow vertical requirement that is absolute when it applies and irrelevant when it doesn't.",
+      "calls": 3,
+      "lostDeals": 2,
+      "revenueAtStake": 214000,
+      "firstMentioned": "2025-11-11",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-024",
+          "company": "Brightline Facilities",
+          "date": "2025-11-11",
+          "quote": "The short answer is crews on paper work orders because the app does not work in basements."
+        },
+        {
+          "callId": "NW-025",
+          "company": "Thornbury Publishing",
+          "date": "2025-12-02",
+          "quote": "The mobile app is fine in the office, which is the one place nobody needs it."
+        },
+        {
+          "callId": "NW-034",
+          "company": "Alderwood Home Services",
+          "date": "2026-04-28",
+          "quote": "Field techs need to update jobs offline and have it sync later. That's non-negotiable for us."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Alderwood Home Services",
+          "dealSizeUsd": 118000,
+          "date": "2026-04-28"
+        },
+        {
+          "company": "Brightline Facilities",
+          "dealSizeUsd": 96000,
+          "date": "2025-11-11"
+        }
+      ]
+    },
+    {
+      "featureKey": "sla-uptime",
+      "name": "Uptime SLA",
+      "description": "Contractual uptime guarantee with a public status page and incident history.",
+      "problem": "No contractual uptime commitment and no public status page, so procurement has nothing to review and vendor approval stalls.",
+      "counterweight": "Three calls, $421k. Mostly a legal and process change rather than engineering work — unusually cheap for the revenue it unblocks.",
+      "calls": 3,
+      "lostDeals": 2,
+      "revenueAtStake": 421000,
+      "firstMentioned": "2026-03-31",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-032",
+          "company": "Meridian Trust Bank",
+          "date": "2026-03-31",
+          "quote": "Do you have a public status page? Our vendor review checks for one."
+        },
+        {
+          "callId": "NW-037",
+          "company": "Kite & Compass Travel",
+          "date": "2026-06-09",
+          "quote": "If you go down during our launch week I need to know what the remedy is, contractually."
+        },
+        {
+          "callId": "NW-039",
+          "company": "Ellery Scientific",
+          "date": "2026-07-14",
+          "quote": "Procurement needs a written uptime commitment. Ninety-nine point nine, in the contract."
+        }
+      ],
+      "lostDealCompanies": [
+        {
+          "company": "Meridian Trust Bank",
+          "dealSizeUsd": 402000,
+          "date": "2026-03-31"
+        },
+        {
+          "company": "Kite & Compass Travel",
+          "dealSizeUsd": 19000,
+          "date": "2026-06-09"
+        }
+      ]
+    },
+    {
+      "featureKey": "dark-mode",
+      "name": "Dark Mode",
+      "description": "A dark theme across the whole product, respecting the system setting.",
+      "problem": "No dark theme, and the product ignores the system setting entirely.",
+      "counterweight": "Zero lost deals and zero revenue behind it. Nothing here argues for shipping it except that it's small, popular, and visible on the first day.",
+      "calls": 3,
+      "lostDeals": 0,
+      "revenueAtStake": 0,
+      "firstMentioned": "2026-05-12",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-035",
+          "company": "Peregrine Digital",
+          "date": "2026-05-12",
+          "quote": "Not a dealbreaker at all, but dark mode would make people happy on day one."
+        },
+        {
+          "callId": "NW-036",
+          "company": "Halcyon Interiors",
+          "date": "2026-05-26",
+          "quote": "Is there a dark theme? Our engineers will complain, they always complain."
+        },
+        {
+          "callId": "NW-037",
+          "company": "Kite & Compass Travel",
+          "date": "2026-06-09",
+          "quote": "Half my team asked me to ask you about dark mode. So, dark mode."
+        }
+      ],
+      "lostDealCompanies": []
+    },
+    {
+      "featureKey": "ai-standup",
+      "name": "AI Standup Digest",
+      "description": "Generated daily summary of what moved, what stalled, and what needs a decision.",
+      "problem": "Nobody knows what actually moved yesterday without opening every project and reading it.",
+      "counterweight": "Two mentions, both unprompted asides at the end of a call. There's almost no evidence behind this one — judge it on conviction, because the corpus has nothing to say.",
+      "calls": 2,
+      "lostDeals": 0,
+      "revenueAtStake": 0,
+      "firstMentioned": "2026-06-30",
+      "origin": "mined",
+      "evidence": [
+        {
+          "callId": "NW-038",
+          "company": "Ferrocast Metals",
+          "date": "2026-06-30",
+          "quote": "If it could tell me each morning what actually changed yesterday, I'd read that every day."
+        },
+        {
+          "callId": "NW-039",
+          "company": "Ellery Scientific",
+          "date": "2026-07-14",
+          "quote": "Everyone's shipping AI summaries now. Do you have anything that writes the standup for me?"
+        }
+      ],
+      "lostDealCompanies": []
+    }
+  ]
+}
